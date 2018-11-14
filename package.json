@@ -1,0 +1,20 @@
+{
+  "name": "hw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "prisma deploy -e .env",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "graphql": "^14.0.2",
+    "graphql-yoga": "^1.16.7",
+    "prisma-binding": "^2.1.6",
+    "prisma-client-lib": "^1.20.3"
+  }
+}
