@@ -6,7 +6,4 @@ generate:
   - generator: graphql-schema
     output: ./generated/
 
-hooks: 
-  post-deploy: 
-    - graphql get-schema -p db
 

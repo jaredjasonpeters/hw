@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "prisma deploy -e .env",
+    "deploy": "prisma deploy -e .env && prisma generate",
     "start": "node index.js"
   },
   "keywords": [],
