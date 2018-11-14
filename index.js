@@ -1,6 +1,6 @@
 require('dotenv').config({ path: '.env' });
 
-const { Prisma } = require('prisma-binding')
+const { Prisma, forwardTo } = require('prisma-binding')
 
 const prisma = new Prisma({
   typeDefs: './generated/prisma.graphql',
@@ -14,6 +14,7 @@ const { GraphQLServer } = require('graphql-yoga')
 
 const resolvers = {
   Query: {
+    users: forwardTo('db'),
     publishedPosts(parent, args, context) {
       return context.prisma.posts({ where: { published: true } })
     },
